@@ -24,31 +24,34 @@ export default function CardContainer() {
     
 
   return (
-    <Container fixed component='section' sx={{marginTop: '4rem'}}> 
-        <Box>
-            <Grid container spacing={2}>
-                {characters.payload.map((character) => (
-                    <Card key={character.id} sx={{ minWidth: 200 }}> 
-                    <CardMedia
-                        sx={{ height: 140 }}
-                        image="/static/images/cards/contemplative-reptile.jpg"
-                        title="green iguana"
-                        />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {character.firstName}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            sobrenome
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small">Share</Button>
-                    </CardActions>
-                    </Card>
-                ))}
-            </Grid>
-        </Box>
-    </Container>
+        <Container fixed component='section' sx={{marginTop: '2rem'}}> 
+                <Box sx={{ width: '100%' }}>
+                    <Grid gap={5} justifyContent="center" container>
+                        {characters.payload.map((character) => (
+                            <Card key={character.id}  sx={{ minWidth: 200, backgroundColor:'#3a3a3a', color:'#ffff'}}> 
+                                <CardMedia
+                                    sx={{ height: 250 }}
+                                    image={character.imageUrl}
+                                    title={character.firstName}
+                                    />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        {character.firstName}
+                                    </Typography>
+                                    <Typography variant="body2" color="white">
+                                        {character.lastName}
+                                    </Typography>
+                                    <Typography variant="body2" color="white">
+                                         {character.family}
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">Favorite</Button>
+                                </CardActions>
+                            </Card>
+                        ))}
+                    </Grid>
+                </Box>
+        </Container>
   );
 }
