@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import getCharacters from "../../config/services/getCharacters";
+import getCharacters from "../../config/services/getCharacters.service";
 import { GlobalState } from "..";
 
 export interface Character {
