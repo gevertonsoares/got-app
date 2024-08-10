@@ -13,13 +13,13 @@ export default function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 5 }}
           >
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Game Of Thrones APP
           </Typography>
-          <Button  size='large' color="primary">Show Favorites</Button>
+          <Button  size='medium' color="primary" sx={{ mr: 5 }}> <b>Show Favorites</b> </Button>
         </Toolbar>
       </AppBar>
   );
