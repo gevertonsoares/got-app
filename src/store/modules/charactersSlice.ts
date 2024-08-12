@@ -30,7 +30,7 @@ export const fetchGetCharacters = createAsyncThunk(
   }
 );
 
-const listCharacters = createSlice({
+const listCharactersSlice = createSlice({
   name: "list-character",
   initialState: initialState,
   reducers: {},
@@ -41,5 +41,5 @@ const listCharacters = createSlice({
   },
 });
 
-export default listCharacters.reducer;
+export default listCharactersSlice.reducer;
 export const selectCharacters = (store: GlobalState) => store.listCharacters;
